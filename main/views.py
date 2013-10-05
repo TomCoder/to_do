@@ -9,3 +9,7 @@ def home(request):
         import pdb; pdb.set_trace() 
 
     return render_to_response("create.html", {}, context_instance=RequestContext(request))
+
+def to_dos(request):
+    events = Event.objects.all()
+    return render_to_response("list.html", {"events":events}, context_instance=RequestContext(request))
