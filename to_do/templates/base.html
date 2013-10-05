@@ -9,6 +9,8 @@
 
     <!-- Le styles -->
     <link href="{{STATIC_URL}}css/bootstrap.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}css/datepicker.css" rel="stylesheet">
+
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -62,9 +64,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="{{STATIC_URL}}js/bootstrap.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
-        {% block javascript %}{% endblock %}
+        $(document).ready(function(){
+            {% block javascript %}
+            {% endblock %}
+        });
     </script>
-
   </body>
 </html>
