@@ -1,4 +1,4 @@
-application: appproject
+application: fluted-equinox-355
 version: 1
 runtime: python27
 api_version: 1
@@ -11,12 +11,15 @@ libraries:
 builtins:
 - django_wsgi: on
 
+env_variables:
+  DJANGO_SETTINGS_MODULE: 'to_do.settings'
+
 handlers:
 - url: /static
-  static_dir: ../static
+  static_dir: /static
   expiration: '0'
 - url: /static/admin
-  static_dir: ../static/admin
+  static_dir: /static/admin
   expiration: '0'
 
 

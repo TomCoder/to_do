@@ -25,15 +25,15 @@ if is_appengine:
     DATABASES = {
         'default': {
             'ENGINE': 'google.appengine.ext.django.backends.rdbms',
-            'INSTANCE': 'cloudsql-project-id:instance-name',
-            'NAME': 'db-schema-name',
+            'INSTANCE': 'fluted-equinox-355:todo',
+            'NAME': 'todo',
         }
     }
 else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': 'to_do',                      # Or path to database file if using sqlite3.
+            'NAME': 'todo',                      # Or path to database file if using sqlite3.
             'USER': 'root',                      # Not used with sqlite3.
             'PASSWORD': '',                  # Not used with sqlite3.
             'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
