@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block javascript %}
+$(".datepicker").datepicker({format:"dd-mm-yyyy"});
+{% endblock%}
+{% block page-content %}
+    <h2 class="well">
+        Create a To Do
+    </h2>
+    <div class="">
+        <form class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="title">Title</label>
+                <div class="controls">
+                    <input type="text" id="title" placeholder="Title">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="description">Description</label>
+                <div class="controls">
+                    <input type="text" id="description" placeholder="Description">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="venue">Venue</label>
+                <div class="controls">
+                    <input type="text" id="venue" placeholder="venue">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="date">Date</label>
+                <div class="controls">
+                    <input class="datepicker" type="text" id="date" placeholder="date">
+                </div>
+            </div>
+            <div class="control-group">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock%}
+
