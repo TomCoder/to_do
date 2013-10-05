@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'to_do.views.home', name='home'),
     # url(r'^to_do/', include('to_do.foo.urls')),
 
-    url(r'^$', 'to_do.main.views.home', name='home'),
+    url(r'^', include('main.urls', namespace='web')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
