@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block javascript %}
+$(".datepicker").datepicker({format:"dd-mm-yyyy"});
+{% endblock%}
+{% block page-content %}
+    <h2 class="well">
+        Stuff I need to do
+    </h2>
+    <div class="">
+        <ol>
+        {% for event in events %}
+            <li>
+            {{ event.date }} : {{ event.title }} : {{ event.description }} : {{ event.venue }}
+            </li>
+        {% endfor %}
+        </ol>
+    </div>
+{% endblock%}
+
