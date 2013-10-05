@@ -6,7 +6,8 @@ from main.models import Event
 
 def home(request):
     if request.method == "POST":
-        pass
+        import pdb; pdb.set_trace() 
+
     return render_to_response("create.html", {}, context_instance=RequestContext(request))
 
 def to_dos(request):
